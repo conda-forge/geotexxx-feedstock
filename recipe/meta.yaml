@@ -1,5 +1,5 @@
 {% set name = "geotexxx" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
-  sha256: 0cba93674f531d51d206b0770a739051e48da9710d692a1fff2528d7a9e99214
+  sha256: c8e626a3dcc2ce247dda141cddc3588820352040e302af636261c8a88024bbbf
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
