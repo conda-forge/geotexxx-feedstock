@@ -24,7 +24,6 @@ requirements:
     - numpy
     - pandas
     - pyproj
-    - geotexxx
 
 test:
   imports:
