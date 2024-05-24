@@ -21,8 +21,9 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - requests
-    - importlib-metadata
+    - numpy
+    - pandas
+    - pyproj
 
 test:
   imports:
