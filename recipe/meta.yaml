@@ -25,6 +25,7 @@ requirements:
     - numpy
     - pandas
     - pyproj
+    - setuptools_scm
 
 test:
   imports:
