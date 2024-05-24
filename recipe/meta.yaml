@@ -1,5 +1,5 @@
 {% set name = "geotexxx" %}
-{% set version = "0.1.17" %}
+{% set version = "0.1.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
-  sha256: ebf5f96696b07ec88e37baef24c11ef537b36ac5af37d9385f6799d8d17d2b09
+  sha256: 10058050cb68e37d71f17757f76ee20477cfa90e61fb935c82b391789a918c5b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -18,11 +18,14 @@ requirements:
   host:
     - python >=3.7
     - setuptools
+    - setuptools_scm
     - pip
   run:
     - python >=3.7
-    - requests
-    - importlib-metadata
+    - numpy
+    - pandas
+    - pyproj
+    - setuptools_scm
 
 test:
   imports:
