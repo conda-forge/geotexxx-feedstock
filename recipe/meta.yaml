@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python ==3.11
+    - python >=3.11
     - setuptools
     - setuptools_scm
     - pip
   run:
-    - python ==3.11
+    - python >=3.11
     - numpy
     - pandas
     - pyproj
