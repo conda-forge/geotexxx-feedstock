@@ -1,5 +1,5 @@
 {% set name = "geotexxx" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
-  sha256: 966a3c7a9db43d974d9d4b1a5a09b18f8fe947f81bc452f2633181580b5cc74e
+  sha256: da5d620c1940b77629028f4075bfedbd5ec9a514b2c3c8dfe5718c750caa368e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -26,6 +26,8 @@ requirements:
     - pandas
     - pyproj
     - setuptools_scm
+    - matplotlib
+    - requests
 
 test:
   imports:
