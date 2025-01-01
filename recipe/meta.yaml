@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
   sha256: da5d620c1940b77629028f4075bfedbd5ec9a514b2c3c8dfe5718c750caa368e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy
     - pandas
     - pyproj
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: Package om geotechnisch grondonderzoek te verwerken
