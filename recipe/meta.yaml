@@ -1,5 +1,5 @@
 {% set name = "geotexxx" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -23,12 +23,11 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy
+    - numpy ==1.26
     - pandas
     - pyproj
     - setuptools_scm
     - matplotlib
-    - matplotlib-base
     - requests
 
 test:
