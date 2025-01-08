@@ -27,7 +27,7 @@ requirements:
     - pandas
     - pyproj
     - setuptools_scm
-    - matplotlib-base
+    - matplotlib
     - requests
 
 test:
