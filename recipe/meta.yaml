@@ -1,5 +1,5 @@
 {% set name = "geotexxx" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
     - pandas
     - pyproj
     - setuptools_scm
-    - matplotlib
+    - matplotlib-base
     - requests
 
 test:
