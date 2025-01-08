@@ -1,13 +1,14 @@
 {% set name = "geotexxx" %}
 {% set version = "0.2.3" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
-  sha256: da5d620c1940b77629028f4075bfedbd5ec9a514b2c3c8dfe5718c750caa368e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geotexxx-{{ version }}.tar.gz
+  sha256: f805997368a079147fc17c7c98f06d73e88faf17af7cf84fa73ccfb5b2d5c4b5
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,17 +17,17 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy
     - pandas
     - pyproj
     - setuptools_scm
-    - matplotlib-base
+    - matplotlib
     - requests
 
 test:
@@ -35,6 +36,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
